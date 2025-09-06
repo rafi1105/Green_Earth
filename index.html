@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': 'var(--primary-color)',
+                        'secondary': 'var(--secondary-color)',
+                        'tag': 'var(--tag-color)',
+                        'custom-bg': 'var(--background-color)',
+                        'custom-text': 'var(--text-color)',
+                    },
+                    fontFamily: {
+                        'custom': 'var(--font-family)',
+                    },
+                    borderRadius: {
+                        'custom': 'var(--border-radius)',
+                    },
+                    boxShadow: {
+                        'custom': 'var(--box-shadow)',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Green Earth</title>
+</head>
+<body>
+    <nav class=" nav flex bg-[var(--primary-color)]  justify-center items-center h-20 ">
+        <div class="text-3xl font-bold text-[var(--text-color2)] ">Green Earth</div>
+        <div class="nav-list ">
+            <li class="">About</li>
+            <li>Gallery</li>
+            <li>Plant a Tree</li>
+        </div>
+        <button class="btn1">Plant a Tree</button>
+    </nav>
+    <div class="banner bg-[var(--tag-color)] flex justify-center items-center flex-col relative w-[1920px] h-[383px]">
+        <img src="./assets/hero-leaf1.png" class="leaf-1 absolute bottom-0 left-1.5" alt="">
+        <img src="./assets/hero-leaf2.png" class="leaf-1 absolute bottom-0 right-1.5" alt="">
+        <h2 class="text-5xl mb-[8px]">Plant a Tree, Grow a Future</h2>
+        <p class="text-center font-normal mb-[24px]">Join our mission to plant 1 million trees and make the Earth greener for future <br> generations.</p>
+        <button class="btn1"> Get Involved</button>
+    </div>
+</body>
+</html>
