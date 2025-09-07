@@ -3,7 +3,7 @@
     --primary-color: #15803D; 
     --sec-color: #FACC15;
     --tag-color: #DCFCE7;
-    --background-color: #FFFFFF;
+    --background-color: rgba(240, 253, 244, 1);
     --text-color: #1F2937;
     --text-color2: #FFFFFF;
     --font-family: 'Inter', sans-serif;
@@ -16,6 +16,10 @@ body{
     box-sizing: border-box;
     font-family: var(--font-family);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .nav-list li {
     display: inline-block;
@@ -46,4 +50,14 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 padding: 24px 135px 24px 135px;
+}
+.categories>li{
+    list-style: none;
+    margin-right: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px;
 }

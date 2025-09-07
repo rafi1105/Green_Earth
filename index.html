@@ -31,7 +31,7 @@
     </script>
     <title>Green Earth</title>
 </head>
-<body>
+<body class="bg-[var(--background-color)]">
     <nav class=" nav flex bg-[var(--primary-color)]  justify-center items-center h-20 ">
         <div class="text-3xl font-bold text-[var(--text-color2)] ">Green Earth</div>
         <div class="nav-list ">
@@ -47,6 +47,45 @@
         <h2 class="text-5xl mb-[8px]">Plant a Tree, Grow a Future</h2>
         <p class="text-center font-normal mb-[24px]">Join our mission to plant 1 million trees and make the Earth greener for future <br> generations.</p>
         <button class="btn1"> Get Involved</button>
+    </div>
+    <div class="main  w-full px-60 my-[100px]">
+        <h2 class="text-3xl text-center mb-15">Choose Your Trees</h2>
+        <div class="grid grid-cols-[1fr_3fr_1fr] gap-50 w-full grid-rows-1">
+            <div class="categories">
+                <p>Categories</p>
+                <li>All Tree</li>
+                <li>Fruit Trees</li>
+                <li>Flowering Trees</li>
+                <li>Shade Trees</li>
+                <li>Medicinal Trees</li>
+                <li>Timber Trees</li>
+                <li>Evergreen Trees</li>
+                <li>Ornamental Plants</li>
+                <li>Bamboo</li>
+                <li>Climbers</li>
+                <li>Aquatic Plants</li>
+            </div>
+            <div class="container">
+                <div class="card flex flex-col p-[16px] m-[30px] h-[380px] w-[340px] bg-white ">
+                    <img src="" alt="" class="">
+                    <p>Mango Tree</p>
+                    <p class="break-words text-sm">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
+                    <div class="flex flex-row gap-40  items-center my-5 ">
+                        <p class="bg-[var(--tag-color)] p-3 rounded-4xl text-[var(--primary-color)]">Fruit Tree</p>
+                        <p>৳500</p>
+                    </div>
+                    <button class="btn2">Add to Cart</button>
+                </div>
+            </div>
+            <div class="myCart">
+                <p>Your Cart</p>
+                <div class="cart bg-[var(--tag-color)]">
+                    <p>Mango Tree</p>
+                    <p>৳500</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
