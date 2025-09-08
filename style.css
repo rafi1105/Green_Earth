@@ -1,9 +1,8 @@
-@import "tailwindcss";
 :root {
     --primary-color: #15803D; 
     --sec-color: #FACC15;
     --tag-color: #DCFCE7;
-    --background-color: rgba(240, 253, 244, 1);
+    --background-color: rgb(235, 254, 241);
     --text-color: #1F2937;
     --text-color2: #FFFFFF;
     --font-family: 'Inter', sans-serif;
@@ -20,6 +19,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--tag-color);
+    overflow-x: hidden;
 }
 .nav-list li {
     display: inline-block;
@@ -53,11 +54,236 @@ padding: 24px 135px 24px 135px;
 }
 .categories>li{
     list-style: none;
-    margin-right: 20px;
     color: var(--text-color);
     cursor: pointer;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 500;
-    padding: 0 10px;
+    
+}
+.categories>li:hover, .categories>li[active]{
+    background:  var(--primary-color);
+    color: var(--text-color2);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.card{
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    text-align: center;
+    justify-content: center;
+    height: fit-content;
+    
+
+}
+.cartpp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px 0;
+
+}
+#plant-container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.btn2{
+    background-color: var(--primary-color);
+    color: var(--text-color2);
+    font-family: var(--font-family);
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    width: 90%;
+    position: relative;
+    bottom: auto;
+
+}
+.btn2:hover{
+    background-color: var(--sec-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+#myCart{
+    width: 300px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    background-color: var(--background-color);
+}
+.cart-item{
+    background-color: var(--tag-color);
+    overflow-y: auto;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 16px;
+}
+#total-price{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--primary-color);
+}
+input,select{
+    padding: 10px 15px;
+    background: white;
+    width: 100%;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+.point{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.point-card{
+    width: 500px;
+    height: 156px;
+    background: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.point-card  h2{
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+@media screen and (max-width: 640px) {
+    body{
+        /* overflow: hidden; */
+    }
+    .nav{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 10px;
+       
+    }
+    .nav-list li {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .btn1{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .banner{
+        width: 100%;
+        height: fit-content;
+        padding: 20px 10px;
+         img{
+            width: 150px;
+        }
+        h2{
+            font-size: 28px;
+        }
+
+    }
+    #main-content{
+        grid-template-columns: 1fr ;
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+    #plant-container{
+        width: 100%;
+        padding: 0px;
+        grid-template-columns: 1fr ;
+        order: 3;
+    }
+    .card{
+        width: 100%;
+        background: white;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 15px;
+        box-shadow: var(--box-shadow);
+    }
+    .categories{
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+        gap: 10px;
+        padding-bottom: 10px;
+        order: 1;
+    }
+    #myCart{
+        width: 100%;
+        margin: 60px 20px;
+        height: fit-content;
+        background: white;
+        padding: 15px;
+        box-shadow: var(--box-shadow);
+        border-radius: 10px;
+        order: 2;
+    }
+    .cartpp{
+        width: 100%;
+    }
+    .point{
+        flex-direction: row;
+        gap: 10px;
+        
+    }
+.campaign{
+    width: 100%;
+    padding: 20px 20px;
+    flex-direction: column;
+    font-size: 20px;
+}
+.today{
+    h2{
+        font-size: 32px;
+    }
+    form{
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+    }
+    input,select{
+        width: 100%;
+        padding: 5px 10px;
+        flex-direction: column;
+        font-size: 16px;
+    
+    }
+}
 }
